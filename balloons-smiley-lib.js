@@ -61,7 +61,7 @@ export class Balloon {
 			ctx.font = `${s * 0.4}px Arial`;
 			ctx.textAlign = "center";
 			ctx.textBaseline = "middle";
-			ctx.fillText("LOVE", 0, 0);
+			ctx.fillText("", 0, 0);
 		}
 
 		ctx.restore();
