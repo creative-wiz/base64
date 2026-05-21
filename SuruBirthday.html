@@ -1,0 +1,652 @@
+<html lang="en" dir="ltr"><head>
+    <meta charset="utf-8">
+    <title>CSS Grid Layout With Background Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+    </script>
+    link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+     <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+ 
+<style>
+
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+     *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size:16px;
+            font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+}
+body{
+   height: 100vh;
+   font-size: 16px;
+   color:#fff;
+   line-height: 1.3;
+}
+.sec{
+ position:fixed;
+ top:0;
+ left:0;
+ bottom:0;
+ right:0;
+ height:100vh;
+ width:100%;
+ background-color:#000;
+ background-position: center top;
+ background-size:cover;
+ 
+}
+button {
+  font-family: "Poppins",sans-serif;
+  position: absolute;
+  color:blue;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  bottom:30px;
+  transform: translateX(-50%);
+  left:50%;
+}
+button:hover{
+  background-color: blue;
+  color:#fff;
+}
+/*--first page--*/
+/*
+.sec1{ 
+  background:url('https://creative-wiz.github.io/base64/file_000000001c5c7207832322af07a4d2d7.png') no-repeat fixed center;
+   
+}
+*/
+.sec1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100vh;
+
+	background: url('https://creative-wiz.github.io/base64/file_000000001c5c7207832322af07a4d2d7.png') no-repeat center center fixed;
+	background-size: cover;
+}
+
+
+
+
+
+/*---second page--*/
+#sec2{
+  display: none;
+  background-color: #D51359;
+}
+#sec2>h3{
+  font-size: 2rem;
+  text-align: center;
+  color:#fff;
+  margin-bottom: 20px;
+ text-transform: uppercase;
+ text-shadow: #363535 3px 3px 5px;
+ font-variant: small-caps;
+}
+.gfcontainer{
+  position: relative;
+  margin:0 auto;
+  max-width: 460px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+}
+
+.gfcontainer img{
+  margin:0 auto;
+  height: 130px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*---end of second page---*/
+ /*--3rd page--*/
+ #sec3{
+  display: none;
+  height:100%;
+ }
+ .sec3{ 
+  background:url('https://i.pinimg.com/originals/be/f0/00/bef000cbacdf8cb879fcee7549725bd7.gif') repeat fixed center;
+  width: 400px;
+  height: 600px;
+  
+
+}
+/*
+.sec3 .bd{
+  width:180px;
+  height:150px;
+  display: block;
+  margin:20px auto;
+  object-fit: fit;
+}*/
+
+.sec3 .bd {
+	width: 200px;
+	height: 300px;
+	display: block;
+	margin: 20px auto;
+	object-fit: contain;
+}
+
+.sec3 .profile{
+  display: block;
+    width: 120px;
+    height: 120px;
+  margin:  0 auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  animation:fd 1s infinite;  
+}
+.sec3>h2,p{
+  padding:5px 20px;
+  animation:fadeInLeft 1s ease 1.5s both;
+
+}
+.sec3>p{
+  color:silver;
+    text-shadow:3px 2px 10px gold;
+    font-size:0.7rem;
+    margin-top:0px;
+    text-align:center;
+    
+}
+
+
+
+#sec4{
+   overflow: hidden;
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #111;
+	
+	
+}
+
+
+
+@keyframes fadeInLeft {
+ 0%{
+   transform:translateX(-40px);
+   opacity:0;
+ }
+ 100% {
+ transform:translateX(0);
+ opacity:1;
+ }
+}
+@keyframes fd {
+ 0%{
+   transform:scale(0.5);
+   
+ }
+ 100% {
+ transform:scale(1);
+ 
+ }
+}
+
+.sec3>h2{
+  font-size:1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+ text-shadow: #363535 3px 3px 5px;
+ font-variant: small-caps;
+ margin-bottom:0px;
+}
+
+
+
+/*
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        /* for touch screen */
+        touch-action: none;
+      }  */
+/*
+      body {
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: #111;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      
+      
+      */
+      h3 {
+      	color: white;
+      	position: absolute;
+      	top: 2%;
+      	left: 50%;
+      	transform: translateX(-50%);
+      }
+      #drag-container,
+      #spin-container {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: auto;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform: rotateX(-10deg);
+        transform: rotateX(-10deg);
+      }
+
+      #drag-container img,
+      #drag-container video {
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 200px;
+        font-size: 50px;
+        text-align: center;
+        -webkit-box-shadow: 0 0 8px #fff;
+        border-radius: 3px;
+        
+        -webkit-box-reflect: below 10px
+          linear-gradient(transparent, transparent, #0005);
+      }
+
+      #drag-container img:hover
+    {
+        -webkit-box-shadow: 0 0 15px #fffd;
+        box-shadow: 0 0 15px 2F32CA;
+        -webkit-box-reflect: below 10px
+          linear-gradient(transparent, transparent, #0007);
+      }
+
+      #drag-container p {
+        font-family: Serif;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        text-align:center;
+        -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+        transform: translate(-50%, -50%) rotateX(90deg);
+        color: #fff;
+      }
+
+      #ground {
+        width: 900px;
+        height: 900px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotateX(720deg);
+        transform: translate(-50%, -50%) rotateX(720deg);
+        background: -webkit-radial-gradient(
+          center center,
+          farthest-side,
+          #9993,
+          transparent
+        );
+      }
+
+     
+
+      @-webkit-keyframes spin {
+        from {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+        }
+        to {
+          -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+        }
+      }
+
+      @keyframes spin {
+        from {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+        }
+        to {
+          -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+        }
+      }
+      @-webkit-keyframes spinRevert {
+        from {
+          -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+        }
+        to {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+        }
+      }
+      @keyframes spinRevert {
+        from {
+          -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+        }
+        to {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+        }
+      }
+
+
+
+
+</style>
+
+
+  </head>
+  <body>
+<section id="sec1" class="sec sec1">
+<button onclick="openpg1()">Let's play Suruchi Game</button>
+</section>
+<section id="sec2" class="sec">
+  <h3>Find Your Gift</h3>
+    <div id="pg1" class="gfcontainer">
+      
+      </div>
+    </section>
+    <section id="sec3" class="sec sec3">
+      <img class="bd" src="https://creative-wiz.github.io/base64/IMG-20260521-WA0022.jpg">
+      <img class="profile" src="https://creative-wiz.github.io/base64/IMG_20260521_195231.jpg">
+      <h2>Suruchi<span></span></h2>
+    <p>Wishing you many many Happy returns of the day My Queen 💏💏 ..
+</p>
+ <button id="btn4">Surprise</button>
+    </section>
+    
+    <section id=sec4>
+    	
+    	<h><font face="Berkshire Swash">&nbsp;&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;
+    	&nbsp;Meri Malkin 👰🏻..</font></h3> 
+<div id="drag-container">
+<div id="spin-container">
+<!-- Add your images (or video) here -->
+<img src="https://creative-wiz.github.io/base64/img1.jpg"
+alt="" />
+
+<img src="https://creative-wiz.github.io/base64/img2.jpg"
+alt="" />
+
+<img src="https://creative-wiz.github.io/base64/img3.jpg"
+alt="" />
+        
+<img src="https://creative-wiz.github.io/base64/Img4.jpg"
+alt="" />
+
+<img src="https://creative-wiz.github.io/base64/img5.jpg"
+alt="" />
+<img src="https://creative-wiz.github.io/base64/img6.jpg"
+alt="" />
+
+<img src="https://creative-wiz.github.io/base64/img7.jpg"
+alt="">
+
+
+<!-- Example image with link -->
+<!--
+<a target="_blank" href="#"></a>
+-->
+<audio id="song"><source src="https://creative-wiz.github.io/base64/Hey Sona.mp3"> </audio>
+
+<!-- Text at center of ground -->
+<p>I love you<br></p>
+</div>
+<div id="ground"></div>
+    </div>
+
+
+    
+    </section>
+    <audio src="https://mobcup.net/d/cz9nla56/mp3" loop id="audio">
+  
+  
+  
+  <script>
+  
+window.addEventListener('click', () => {
+    
+    document.getElementById("song"). play();
+    
+});
+
+      // Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
+      // Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html
+
+      // You can change global variables here:
+      var radius = 240; // how big of the radius
+      var autoRotate = true; // auto rotate or not
+      var rotateSpeed = -55; // unit: seconds/360 degrees
+      var imgWidth = 130; // width of images (unit: px)
+      var imgHeight = 170; // height of images (unit: px)
+
+
+
+      // ===================== start =======================
+      setTimeout(init, 100);
+
+      var odrag = document.getElementById("drag-container");
+      var ospin = document.getElementById("spin-container");
+      var aImg = ospin.getElementsByTagName("img");
+      var aEle =[...aImg ]
+
+      // Size of images
+      ospin.style.width = imgWidth + "px";
+      ospin.style.height = imgHeight + "px";
+
+      // Size of ground - depend on radius
+      var ground = document.getElementById("ground");
+      ground.style.width = radius * 2 + "px";
+      ground.style.height = radius * 2 + "px";
+
+      function init(delayTime) {
+        for (var i = 0; i < aEle.length; i++) {
+          aEle[i].style.transform =
+            "rotateY(" +
+            i * (360/ aEle.length) +
+            "deg) translateZ(" +
+            radius +
+            "px)";
+          aEle[i].style.transition = "transform 1s";
+          aEle[i].style.transitionDelay =
+            delayTime || (aEle.length - i) / 4 + "s";
+        }
+      }
+
+      function applyTranform(obj) {
+        // Constrain the angle of camera (between 0 and 180)
+        if (tY >180) tY = 180;
+        if (tY < 0) tY = 0;
+
+        // Apply the angle
+        obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+      }
+
+      function playSpin(yes) {
+        ospin.style.animationPlayState = yes ? "running" : "paused";
+      }
+
+      var sX,
+        sY,
+        nX,
+        nY,
+        desX = 0,
+        desY = 0,
+        tX = 0,
+        tY = 10;
+
+      // auto spin
+      if (autoRotate) {
+        var animationName = rotateSpeed > 0? "spin" : "spinRevert";
+        ospin.style.animation = `${animationName} ${Math.abs(
+          rotateSpeed
+        )}s infinite linear`;
+      }
+
+      // add background music
+     
+      // setup events
+      document.onpointerdown = function(e) {
+        clearInterval(odrag.timer);
+        e = e || window.event;
+        var sX = e.clientX,
+          sY = e.clientY;
+
+        this.onpointermove = function(e) {
+          e = e || window.event;
+          var nX = e.clientX,
+            nY = e.clientY;
+          desX = nX - sX;
+          desY = nY - sY;
+          tX += desX * 0.1;
+          tY += desY * 0.1;
+          applyTranform(odrag);
+          sX = nX;
+          sY = nY;
+        };
+
+        this.onpointerup = function(e) {
+          odrag.timer = setInterval(function() {
+            desX *= 0.95;
+            desY *= 0.95;
+            tX += desX * 0.1;
+            tY += desY * 0.1;
+            applyTranform(odrag);
+            playSpin(false);
+            if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+              clearInterval(odrag.timer);
+              playSpin(true);
+            }
+          }, 17);
+          this.onpointermove = this.onpointerup = null;
+        };
+
+        return false;
+      };
+
+      document.onmousewheel = function(e) {
+        e = e || window.event;
+        var d = e.wheelDelta / 20 || -e.detail;
+        radius += d;
+        init(1);
+      };
+    </script>
+    	
+  
+  
+  
+  
+  
+  <script>
+    const openpg1=()=>{
+    document.getElementById('sec2').style.display="block";
+    document.getElementById('sec1').style.display="none";
+    var pg1=document.getElementById('pg1');
+    var txt="";
+    const shuffle=(array)=> {
+      array.sort(() => Math.random() - 0.5);
+    }
+ 
+    let arr = [1,2,3,4,5,6,7,8];
+    shuffle(arr);
+
+    for(let i=0;i<8;i++){
+    txt+=`<img id="${i}" src="https://i.pinimg.com/originals/b4/ff/30/b4ff30eaa2d64022f350f6bca64ee6db.png" alt="Open Gift" onclick="openGift(${arr[i]})">`; }
+    pg1.innerHTML=txt;
+  }
+const openGift=(val)=>{
+  switch (val) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  case 7:showAlert();break;
+  case 8:openGiftpage();
+    
+}
+}
+const showAlert=()=>{
+  Swal.fire({
+  imageUrl:"https://creative-wiz.github.io/base64/08009df64282a22dee0b712838957a2e.gif",
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+  imageWidth: 200,
+})
+} 
+const openGiftpage=()=>{let sec3 =
+    document.getElementById('sec3').style.display="block";
+    document.getElementById('sec2').style.display="none";
+    var a=document.getElementById("audio");
+    if(a.paused){
+        a.play();
+        
+}
+}
+let btn4 = document.getElementById('btn4');
+let sec4 = document.getElementById('sec4');
+btn4.addEventListener('click', ()=>{
+	sec4.style.display = 'block';
+	sec3.style.display = 'none'
+}
+
+)
+  
+  </script>
+
+      </audio></body></html>
